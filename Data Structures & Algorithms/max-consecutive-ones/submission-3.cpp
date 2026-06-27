@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 
 class Solution
 {
@@ -35,3 +40,16 @@ class Solution
             return static_cast<int>(streak_max);
         }
 };
+
+
+int main()
+{
+    vector<int> nums = { 1, 1, 0, 1, 1, 1 };
+
+    Solution solution;
+	int result = solution.findMaxConsecutiveOnes(nums);
+
+	cout << "Max consecutive ones: " << result << endl; // Output: 3
+	
+    return 0;
+}

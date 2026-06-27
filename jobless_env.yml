@@ -1,0 +1,80 @@
+name: jobless_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+
+  # Data manipulation and analysis
+  - numpy
+  - pandas
+  - polars
+
+  # Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+
+  # Machine Learning
+  - scikit-learn
+  - xgboost
+
+  # Deep Learning (optional - comment out if not needed)
+  - tensorflow
+  - pytorch
+
+  # Statistics
+  - scipy
+  - statsmodels
+
+  # Database and SQL
+  - sqlalchemy
+  - psycopg2
+  - sqlite
+
+  # API and Web
+  - requests
+  - fastapi
+  - uvicorn
+
+  # Testing
+  - pytest
+  - unittest2
+
+  # Code quality and formatting
+  - black
+  - flake8
+  - pylint
+
+  # Jupyter for notebooks
+  - jupyter
+  - jupyterlab
+  - nb_conda_kernels
+
+  # Utilities
+  - tqdm
+  - click
+  - pyyaml
+  - python-dotenv
+
+  # Version control
+  - git
+
+  # Logging and debugging
+  - loguru
+  - ipdb
+
+  # pip dependencies for libraries not available in conda
+  - pip:
+    - memory-profiler
+    - line-profiler
+    - pandas-profiling
+    - streamlit
+    - pydantic
+    - openpyxl
+    - xlsxwriter
+    - pdbpp
+    - pycodestyle
+    - autoflake
+    - isort

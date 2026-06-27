@@ -1,0 +1,22 @@
+@startuml
+start
+:streak_max = 0;
+:streak_1 = 0;
+
+repeat
+  :next number;
+  
+  if (number == 1?) then (yes)
+    :streak_1++;
+  else (no)
+    :streak_max = max(streak_1, streak_max);
+    :streak_1 = 0;
+  endif
+  
+  :move to next;
+repeat while (more numbers?) is (yes)
+->no;
+
+:return max(streak_1, streak_max);
+stop
+@enduml
