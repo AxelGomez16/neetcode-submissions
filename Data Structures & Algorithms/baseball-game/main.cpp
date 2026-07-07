@@ -1,18 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <numeric>
+
+using namespace std;
+
+
 class Solution {
 public:
   int calPoints(vector<string>& operations) 
   {
-    int sumOperations = 0U;
 
     vector<int> records;
 
-    
     for (string& operation : operations)
     {
 
       if (operation == "+")
       {
-        unsigned int recordsSize = records.size();
+        size_t recordsSize = records.size();
         records.push_back(records[recordsSize - 1] + records[recordsSize - 2]);
       }
       else if (operation == "C")
@@ -29,11 +35,22 @@ public:
       }
     }
 
-    for (int& record : records)
-    {
-      sumOperations = sumOperations + record;
-    }
-  
-    return sumOperations;
+    return accumulate(records.begin(), records.end(), 0);
   }
 };
+
+
+int main ()
+{
+
+  // vector<string> ops = {"1","2","+","C","5","D"};
+
+  vector<string> ops = {"5", "2", "C", "D", "+"};
+
+  Solution solution;
+
+  int result = solution.calPoints(ops);
+
+}
+
+

@@ -1,10 +1,15 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
 	bool isValid(string s)
 	{
+		char bracket_t = '\0';
 		vector<char> bracketsNames;
-		char bracket_t;
-
 		bool validBracket = true;
 
 		for (char& letter : s)
@@ -43,3 +48,21 @@ public:
 
     }
 };
+
+
+int main ()
+{
+	//string s = "]";
+	string s = "[(])";
+	//string s = "(){}}{";
+	//string s = ")(){}";
+	//string s = "[(])";
+	//string s = "([{}])";
+
+
+	Solution solution;
+	bool result = solution.isValid(s);
+
+	cout << "result: " << result << endl;
+
+}
